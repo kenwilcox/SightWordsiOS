@@ -31,11 +31,21 @@
                                 </constraints>
                                 <state key="normal" title="Hint ?"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFt-yf-YjR">
+                                <rect key="frame" x="473" y="519" width="107" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="5Ih-Yk-b7F"/>
+                                    <constraint firstAttribute="height" constant="61" id="zmE-9N-F9q"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="mok-cy-RZz" secondAttribute="leading" id="JOR-G4-Iyt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Nae-b1-Pl2" secondAttribute="leading" id="Kkx-xn-aem"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lFt-yf-YjR" secondAttribute="trailing" id="Nbu-JA-64R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lFt-yf-YjR" secondAttribute="bottom" constant="20" id="UXm-PB-Vo0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nae-b1-Pl2" secondAttribute="bottom" constant="20" id="i5q-Ki-xvL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mok-cy-RZz" secondAttribute="trailing" id="iIk-4E-iiu"/>
                             <constraint firstItem="mok-cy-RZz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uBB-C6-CWZ"/>
