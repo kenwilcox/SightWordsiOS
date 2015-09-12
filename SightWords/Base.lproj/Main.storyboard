@@ -30,6 +30,9 @@
                                     <constraint firstAttribute="width" constant="107" id="EXt-wR-BTy"/>
                                 </constraints>
                                 <state key="normal" title="Hint ?"/>
+                                <connections>
+                                    <action selector="hintButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rX5-qS-fdz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFt-yf-YjR">
                                 <rect key="frame" x="473" y="519" width="107" height="61"/>
@@ -38,6 +41,9 @@
                                     <constraint firstAttribute="height" constant="61" id="zmE-9N-F9q"/>
                                 </constraints>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ck2-X7-uGZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -51,6 +57,11 @@
                             <constraint firstItem="mok-cy-RZz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uBB-C6-CWZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hintButton" destination="Nae-b1-Pl2" id="Ux7-Rl-AA0"/>
+                        <outlet property="nextButton" destination="lFt-yf-YjR" id="ttH-dK-GQf"/>
+                        <outlet property="wordLabel" destination="mok-cy-RZz" id="KOP-h6-8GW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
