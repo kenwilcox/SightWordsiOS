@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var wordLabel: UILabel!
+  @IBOutlet weak var hintButton: UIButton!
+  @IBOutlet weak var nextButton: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +24,12 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func hintButtonPressed(sender: UIButton) {
+    
+  }
 
+  @IBAction func nextButtonPressed(sender: UIButton) {
+    
+  }
 }
 
