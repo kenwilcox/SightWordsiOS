@@ -17,6 +17,8 @@
 		BEA670581BA06CC7001B4166 /* SightWordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA670571BA06CC7001B4166 /* SightWordsUITests.swift */; };
 		BEF0B45E1BA4A8650015619C /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0B45D1BA4A8650015619C /* GameEngine.swift */; settings = {ASSET_TAGS = (); }; };
 		BEF0B4601BA4A8B10015619C /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = BEF0B45F1BA4A8B10015619C /* words.json */; settings = {ASSET_TAGS = (); }; };
+		BEF0B4641BA4DCA90015619C /* WordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0B4631BA4DCA90015619C /* WordItem.swift */; settings = {ASSET_TAGS = (); }; };
+		BEF0B4661BA4DE390015619C /* ShuffleExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF0B4651BA4DE390015619C /* ShuffleExt.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		BEA670591BA06CC7001B4166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF0B45D1BA4A8650015619C /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		BEF0B45F1BA4A8B10015619C /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		BEF0B4631BA4DCA90015619C /* WordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordItem.swift; sourceTree = "<group>"; };
+		BEF0B4651BA4DE390015619C /* ShuffleExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuffleExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				BEA670341BA06CC7001B4166 /* AppDelegate.swift */,
 				BEA670361BA06CC7001B4166 /* ViewController.swift */,
 				BEF0B45D1BA4A8650015619C /* GameEngine.swift */,
+				BEF0B4631BA4DCA90015619C /* WordItem.swift */,
+				BEF0B4651BA4DE390015619C /* ShuffleExt.swift */,
 				BEA670381BA06CC7001B4166 /* Main.storyboard */,
 				BEA6703E1BA06CC7001B4166 /* Assets.xcassets */,
 				BEA670401BA06CC7001B4166 /* LaunchScreen.storyboard */,
@@ -281,10 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF0B4641BA4DCA90015619C /* WordItem.swift in Sources */,
 				BEA670371BA06CC7001B4166 /* ViewController.swift in Sources */,
 				BEA670351BA06CC7001B4166 /* AppDelegate.swift in Sources */,
 				BEA6703D1BA06CC7001B4166 /* SightWords.xcdatamodeld in Sources */,
 				BEF0B45E1BA4A8650015619C /* GameEngine.swift in Sources */,
+				BEF0B4661BA4DE390015619C /* ShuffleExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

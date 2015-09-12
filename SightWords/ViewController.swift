@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  private let game = GameEngine()
+  private var item: WordItem?
+  
   @IBOutlet weak var wordLabel: UILabel!
   @IBOutlet weak var hintButton: UIButton!
   @IBOutlet weak var nextButton: UIButton!
@@ -17,8 +19,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    var gc = GameEngine()
-    gc.doSomething()
+    hintButton.hidden = true;
+    nextButton.setTitle("YES!", forState: .Normal)
   }
 
   override func didReceiveMemoryWarning() {
@@ -27,11 +29,13 @@ class ViewController: UIViewController {
   }
 
   @IBAction func hintButtonPressed(sender: UIButton) {
-    
+    print(item!.hint)
   }
 
   @IBAction func nextButtonPressed(sender: UIButton) {
-    
+    item = game.getNextWordItem()
+    print(game.getStatusText())
+    wordLabel.text = item!.word
   }
 }
 
