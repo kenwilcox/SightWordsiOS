@@ -20,7 +20,11 @@ class GameEngine {
         let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSArray
         
         for item in jsonResult {
-          let wordItem = WordItem(word: item["word"] as! String, hint: item["hint"] as! String)
+          let wordItem = WordItem(
+            word: item["word"] as! String,
+            hint: item["hint"] as! String,
+            type: item["type"] as! String
+          )
           wordItemList.append(wordItem)
         }
         
