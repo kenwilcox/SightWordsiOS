@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
+  private let game = GameEngine()
+  private var item: WordItem?
+  private var hintSound: AVAudioPlayer!
+  
   @IBOutlet weak var wordLabel: UILabel!
   @IBOutlet weak var hintButton: UIButton!
   @IBOutlet weak var nextButton: UIButton!
@@ -17,6 +21,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    hintButton.hidden = true;
+    nextButton.setTitle("YES!", forState: .Normal)
+    game.buildCommandList()
   }
 
   override func didReceiveMemoryWarning() {
@@ -25,11 +32,33 @@ class ViewController: UIViewController {
   }
 
   @IBAction func hintButtonPressed(sender: UIButton) {
-    
+    print(item!.hint)
+    hintSound = setupAudioPlayerWithFile(item!.hint, type: item!.type)
+    hintSound.play()
   }
 
   @IBAction func nextButtonPressed(sender: UIButton) {
+    item = game.getNextWordItem()
+    print(game.getStatusText())
+    wordLabel.text = item!.word
     
+    // just do this once
+    nextButton.setTitle("Next >>", forState: .Normal)
+    hintButton.hidden = false
+  }
+  
+  func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
+    let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
+    let url = NSURL.fileURLWithPath(path!)
+    var audioPlayer:AVAudioPlayer?
+    
+    do {
+      try audioPlayer = AVAudioPlayer(contentsOfURL: url)
+    } catch {
+      print("NO AUDIO PLAYER")
+    }
+    
+    return audioPlayer!
   }
 }
 
