@@ -45,21 +45,34 @@
                                     <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ck2-X7-uGZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 40 of 40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bez-uf-r4r">
+                                <rect key="frame" x="244" y="482" width="112" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="AUG-Bn-bL1"/>
+                                    <constraint firstAttribute="height" constant="21" id="Tkw-Ul-gyo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="mok-cy-RZz" secondAttribute="leading" id="JOR-G4-Iyt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Nae-b1-Pl2" secondAttribute="leading" id="Kkx-xn-aem"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lFt-yf-YjR" secondAttribute="trailing" id="Nbu-JA-64R"/>
+                            <constraint firstItem="Bez-uf-r4r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OcX-aG-hQh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lFt-yf-YjR" secondAttribute="bottom" constant="20" id="UXm-PB-Vo0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nae-b1-Pl2" secondAttribute="bottom" constant="20" id="i5q-Ki-xvL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mok-cy-RZz" secondAttribute="trailing" id="iIk-4E-iiu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bez-uf-r4r" secondAttribute="bottom" constant="97" id="maj-4t-Q9R"/>
                             <constraint firstItem="mok-cy-RZz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uBB-C6-CWZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="hintButton" destination="Nae-b1-Pl2" id="Ux7-Rl-AA0"/>
                         <outlet property="nextButton" destination="lFt-yf-YjR" id="ttH-dK-GQf"/>
+                        <outlet property="stepLabel" destination="Bez-uf-r4r" id="O7B-t7-SWc"/>
                         <outlet property="wordLabel" destination="mok-cy-RZz" id="KOP-h6-8GW"/>
                     </connections>
                 </viewController>

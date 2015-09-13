@@ -17,13 +17,14 @@ class ViewController: UIViewController {
   @IBOutlet weak var wordLabel: UILabel!
   @IBOutlet weak var hintButton: UIButton!
   @IBOutlet weak var nextButton: UIButton!
+  @IBOutlet weak var stepLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     hintButton.hidden = true;
     nextButton.setTitle("YES!", forState: .Normal)
-    game.buildCommandList()
+    //game.buildCommandList()
   }
 
   override func didReceiveMemoryWarning() {
@@ -32,19 +33,23 @@ class ViewController: UIViewController {
   }
 
   @IBAction func hintButtonPressed(sender: UIButton) {
-    print(item!.hint)
+    hintButton.enabled = false
+    //print(item!.hint)
     hintSound = setupAudioPlayerWithFile(item!.hint, type: item!.type)
     hintSound.play()
+    hintButton.enabled = true
   }
 
   @IBAction func nextButtonPressed(sender: UIButton) {
     item = game.getNextWordItem()
-    print(game.getStatusText())
+    //print(game.getStatusText())
+    stepLabel.text = game.getStatusText()
     wordLabel.text = item!.word
     
     // just do this once
     nextButton.setTitle("Next >>", forState: .Normal)
     hintButton.hidden = false
+    wordLabel.font = UIFont.systemFontOfSize(82.0)
   }
   
   func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
