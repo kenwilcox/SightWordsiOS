@@ -10,7 +10,8 @@ import Foundation
 
 class GameEngine {
   private var wordItemList: [WordItem] = []
-  private var currentPos = 0
+  // TODO: Might be easier to just copy the array to a new one and pop items off the top
+  private var currentPos = -1
   
   init() {
     if let path = NSBundle.mainBundle().pathForResource("words", ofType: "json") {
@@ -25,7 +26,7 @@ class GameEngine {
         
         wordItemList.shuffleInPlace()
         print(wordItemList.count)
-        currentPos = 0
+        currentPos = -1
         
       } catch let error as NSError {
         print(error.localizedDescription)
@@ -34,16 +35,20 @@ class GameEngine {
   }
   
   func getNextWordItem() -> WordItem {
-    let item = wordItemList[currentPos]
-    if currentPos < wordItemList.count {
-      currentPos += 1
-    } else {
+    currentPos += 1
+    if currentPos >= wordItemList.count {
       currentPos = 0
     }
-    return item
+    return wordItemList[currentPos]
   }
   
   func getStatusText() -> String {
-    return "Word \(currentPos) of \(wordItemList.count)"
+    return "Word \(currentPos + 1) of \(wordItemList.count)"
+  }
+  
+  func buildCommandList() {
+    for item in wordItemList {
+      print("say \(item.word) -o \(item.word)")
+    }
   }
 }

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     hintButton.hidden = true;
     nextButton.setTitle("YES!", forState: .Normal)
+    game.buildCommandList()
   }
 
   override func didReceiveMemoryWarning() {
@@ -36,6 +37,10 @@ class ViewController: UIViewController {
     item = game.getNextWordItem()
     print(game.getStatusText())
     wordLabel.text = item!.word
+    
+    // just do this once
+    nextButton.setTitle("Next >>", forState: .Normal)
+    hintButton.hidden = false
   }
 }
 
