@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     // just do this once
     nextButton.setTitle("Next >>", forState: .Normal)
     hintButton.hidden = false
-    wordLabel.font = UIFont.systemFontOfSize(82.0)
+    //wordLabel.font = UIFont.systemFontOfSize(82.0)
   }
   
   func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
