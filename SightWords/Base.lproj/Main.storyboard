@@ -24,6 +24,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="2" height="1"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="82"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nae-b1-Pl2">
                                 <rect key="frame" x="20" y="519" width="107" height="61"/>
@@ -86,7 +89,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nae-b1-Pl2" secondAttribute="bottom" constant="20" id="i5q-Ki-xvL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mok-cy-RZz" secondAttribute="trailing" id="iIk-4E-iiu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bez-uf-r4r" secondAttribute="bottom" constant="97" id="maj-4t-Q9R"/>
-                            <constraint firstItem="mok-cy-RZz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="uBB-C6-CWZ"/>
+                            <constraint firstItem="mok-cy-RZz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="uBB-C6-CWZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -98,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="361"/>
+            <point key="canvasLocation" x="304.5" y="360.75"/>
         </scene>
     </scenes>
 </document>
