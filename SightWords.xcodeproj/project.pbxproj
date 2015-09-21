@@ -93,6 +93,8 @@
 		BEA670531BA06CC7001B4166 /* SightWordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SightWordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA670571BA06CC7001B4166 /* SightWordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightWordsUITests.swift; sourceTree = "<group>"; };
 		BEA670591BA06CC7001B4166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEBC9DB11BAFA8A40017BE19 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BEBC9DB21BAFA8A40017BE19 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BEF0B45D1BA4A8650015619C /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		BEF0B45F1BA4A8B10015619C /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		BEF0B4631BA4DCA90015619C /* WordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordItem.swift; sourceTree = "<group>"; };
@@ -167,6 +169,8 @@
 		BEA670281BA06CC7001B4166 = {
 			isa = PBXGroup;
 			children = (
+				BEBC9DB11BAFA8A40017BE19 /* LICENSE.md */,
+				BEBC9DB21BAFA8A40017BE19 /* README.md */,
 				BEA670331BA06CC7001B4166 /* SightWords */,
 				BEA6704B1BA06CC7001B4166 /* SightWordsTests */,
 				BEA670561BA06CC7001B4166 /* SightWordsUITests */,
