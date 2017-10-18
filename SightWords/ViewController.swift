@@ -22,8 +22,8 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    hintButton.hidden = true;
-    nextButton.setTitle("YES!", forState: .Normal)
+    hintButton.isHidden = true;
+    nextButton.setTitle("YES!", for: [])
     //game.buildCommandList()
   }
 
@@ -33,11 +33,11 @@ class ViewController: UIViewController {
   }
 
   @IBAction func hintButtonPressed(sender: UIButton) {
-    hintButton.enabled = false
+    hintButton.isEnabled = false
     //print(item!.hint)
-    hintSound = setupAudioPlayerWithFile(item!.hint, type: item!.type)
+    hintSound = setupAudioPlayerWithFile(file: item!.hint, type: item!.type)
     hintSound.play()
-    hintButton.enabled = true
+    hintButton.isEnabled = true
   }
 
   @IBAction func nextButtonPressed(sender: UIButton) {
@@ -47,18 +47,18 @@ class ViewController: UIViewController {
     wordLabel.text = item!.word
     
     // just do this once
-    nextButton.setTitle("Next >>", forState: .Normal)
-    hintButton.hidden = false
+    nextButton.setTitle("Next >>", for: [])
+    hintButton.isHidden = false
     //wordLabel.font = UIFont.systemFontOfSize(82.0)
   }
   
-  func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
-    let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
-    let url = NSURL.fileURLWithPath(path!)
+  func setupAudioPlayerWithFile(file:String, type:String) -> AVAudioPlayer  {
+    let path = Bundle.main.path(forResource: file as String, ofType: type as String)
+    let url = NSURL.fileURL(withPath: path!)
     var audioPlayer:AVAudioPlayer?
     
     do {
-      try audioPlayer = AVAudioPlayer(contentsOfURL: url)
+      try audioPlayer = AVAudioPlayer(contentsOf: url)
     } catch {
       print("NO AUDIO PLAYER")
     }

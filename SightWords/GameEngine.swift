@@ -14,21 +14,25 @@ class GameEngine {
   private var currentPos = -1
   
   init() {
-    if let path = NSBundle.mainBundle().pathForResource("words", ofType: "json") {
+    if let path = Bundle.main.path(forResource: "words", ofType: "json") {
       do {
-        let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
-        let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+        let data = try NSData(contentsOf: NSURL(fileURLWithPath: path) as URL, options: NSData.ReadingOptions.mappedIfSafe)
+        let jsonResult: NSArray = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSArray
         
         for item in jsonResult {
+          let dic = item as! NSDictionary
           let wordItem = WordItem(
-            word: item["word"] as! String,
-            hint: item["hint"] as! String,
-            type: item["type"] as! String
+            word: dic["word"] as! String,
+            hint: dic["hint"] as! String,
+            type: dic["type"] as! String
+            //word: "word",
+            //hint: "where",
+            //type: "type"
           )
           wordItemList.append(wordItem)
         }
         
-        wordItemList.shuffleInPlace()
+        wordItemList.shuffle()
         print(wordItemList.count)
         currentPos = -1
         
