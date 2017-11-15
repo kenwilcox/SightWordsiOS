@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     hintButton.isHidden = true;
     nextButton.setTitle("YES!", for: [])
+    stepLabel.text = game.getStatusText()
     //game.buildCommandList()
   }
 

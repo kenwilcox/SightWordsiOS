@@ -12,4 +12,5 @@ struct WordItem {
   var word: String
   var hint: String
   var type: String
+  var set: Int
 }

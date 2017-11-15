@@ -24,15 +24,14 @@ class GameEngine {
           let wordItem = WordItem(
             word: dic["word"] as! String,
             hint: dic["hint"] as! String,
-            type: dic["type"] as! String
-            //word: "word",
-            //hint: "where",
-            //type: "type"
+            type: dic["type"] as! String,
+            set: dic["set"] as! Int
           )
           wordItemList.append(wordItem)
         }
         
         wordItemList.shuffle()
+        wordItemList = wordItemList.filter{$0.set == 3}
         print(wordItemList.count)
         currentPos = -1
         
@@ -51,6 +50,8 @@ class GameEngine {
   }
   
   func getStatusText() -> String {
+    // ugh, I don't like magic numbers
+    if (currentPos == -1) {return "\(wordItemList.count) words"}
     return "Word \(currentPos + 1) of \(wordItemList.count)"
   }
   
